@@ -1,11 +1,11 @@
 import java.util.Scanner;
-import estimators.LowerBound;
+import general.Controller;
 
 public class main {
 
 	public static void main(String[] args) {
 		
-		/*Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		
 		System.out.println("Especifique quais simuladores você deseja utilizar: \n"
 				+ "1 - Lower Bound \n"
@@ -19,13 +19,13 @@ public class main {
 		System.out.println("Especifique o número máximo de etiquetas: ");
 		int maxNumberTags = in.nextInt();
 		System.out.println("Especifique o número de repetições por quantidade de etiquetas: ");
-		int numberRepetitions = in.nextInt();
+		int repetitionsEachNumberTags = in.nextInt();
 		System.out.println("Especifique o tamanho inicial do quadro: ");
-		int inicialFrameSize = in.nextInt();*/
+		int inicialFrameSize = in.nextInt();
 		
-		LowerBound lb = new LowerBound(10,3);
+		Controller c = new Controller(inicialNumberTags,incrementTagsBy,maxNumberTags,repetitionsEachNumberTags,inicialFrameSize);
 		
-		lb.simulate();
+		c.runEstimator();
 		
 		System.out.println("heh");
 		
